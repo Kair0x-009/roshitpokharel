@@ -61,6 +61,24 @@
       flex-grow: 1;
       padding: 20px;
     }
+
+    @keyframes grow {
+            0%   {  border-color: red; transform: scale(0.90);}
+            25%  {  border-color: blue;}
+            50%  {  border-color: yellow;}
+            75%  { border-color: green;}
+            100% { border-color: red;}
+            
+        }
+
+        .profile> img p{
+            animation-name: grow;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
     .profile {
       display: flex;
       flex-direction: column;
