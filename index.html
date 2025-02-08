@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ne">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -170,7 +170,7 @@
         </div>
         <div class="review-form">
             <h2>Have any Suggestions or Feedback, Share here;</h2>
-            <form>
+            <form action="https://formspree.io/f/mpwqwjen" method="POST">
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <textarea name="message" rows="5" placeholder="Your Suggestions or Feedback" required></textarea>
@@ -190,56 +190,5 @@
     <footer>
         <p>&copy; 2025 Roshit Pokharel. All Rights Reserved.</p>
     </footer>
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-app.js";
-        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-analytics.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.3.0/firebase-firestore.js";
-        
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyBSKpq3nBM4erBqDZKcIxqNjZ8J1-7TgbI",
-            authDomain: "r0shit009.firebaseapp.com",
-            projectId: "r0shit009",
-            storageBucket: "r0shit009.firebasestorage.app",
-            messagingSenderId: "918669005143",
-            appId: "1:918669005143:web:4c6df3e5bfcdb0f7966e12",
-            measurementId: "G-738ZE1S6BP"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getFirestore(app);
-
-        // Form submission and Firebase Firestore storage
-        const form = document.querySelector('form');
-        form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    console.log('Form submission triggered');
-    
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
-
-    try {
-        // Save the data to Firestore
-        const docRef = await addDoc(collection(db, 'feedback'), {
-            name: name,
-            email: email,
-            message: message
-        });
-        console.log('Document written with ID: ', docRef.id);
-        
-        // Log the event in Firebase Analytics
-        logEvent(analytics, 'form_submission', { name: form.name.value });
-
-    } catch (e) {
-        console.error('Error adding document: ', e);
-    }
-});
-
-    </script>
 </body>
 </html>
