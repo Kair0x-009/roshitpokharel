@@ -216,28 +216,30 @@
         // Form submission and Firebase Firestore storage
         const form = document.querySelector('form');
         form.addEventListener('submit', async (e) => {
-            e.preventDefault();
+    e.preventDefault();
+    console.log('Form submission triggered');
+    
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
 
-            const name = form.name.value;
-            const email = form.email.value;
-            const message = form.message.value;
-
-            try {
-                // Save the data to Firestore
-                const docRef = await addDoc(collection(db, 'feedback'), {
-                    name: name,
-                    email: email,
-                    message: message
-                });
-                console.log('Document written with ID: ', docRef.id);
-
-                // Log the event in Firebase Analytics
-                logEvent(analytics, 'form_submission', { name: form.name.value });
-
-            } catch (e) {
-                console.error('Error adding document: ', e);
-            }
+    try {
+        // Save the data to Firestore
+        const docRef = await addDoc(collection(db, 'feedback'), {
+            name: name,
+            email: email,
+            message: message
         });
+        console.log('Document written with ID: ', docRef.id);
+        
+        // Log the event in Firebase Analytics
+        logEvent(analytics, 'form_submission', { name: form.name.value });
+
+    } catch (e) {
+        console.error('Error adding document: ', e);
+    }
+});
+
     </script>
 </body>
 </html>
