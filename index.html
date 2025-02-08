@@ -1,194 +1,202 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-image: url('https://wallpapers.com/images/hd/programming-a-laptop-wuze1bxup48cr0bs.jpg');
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: darkslategrey;
-            padding: 10px;
-            text-align: center;
-        }
-        #logo {
-            font-size: 2rem;
-            font-family: 'Courier New', Courier, monospace;
-            color: white;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            background-color: cadetblue;
-            padding: 15px;
-            font-size: 18px;
-            gap: 20px;
-            opacity: 0.9;
-            text-transform: uppercase;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-        }
-        nav a:hover {
-            background-color: black;
-            color: white;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        main {
-            text-align: center;
-            flex-grow: 1;
-            padding: 20px;
-        }
-        .profile {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            color: white;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 20px auto;
-        }
-        .profile img {
-            border: 5px solid white;
-            max-width: 200px;
-            border-radius: 50%;
-        }
-        .profile h1, .profile h2 {
-            margin: 10px 0;
-        }
-        .profile h1 {
-            font-size: 2rem;
-            color: #00ffff;
-        }
-        .profile h2 a {
-            color: #00ffff;
-            text-decoration: none;
-        }
-        .profile h2 a:hover {
-            text-decoration: underline;
-        }
-        .follow {
-            text-align: center;
-            padding: 20px;
-            background-color: black;
-            color: white;
-        }
-        .follow a {
-            text-decoration: none;
-            color: #00ffff;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-        .follow a:hover {
-            color: white;
-        }
-        footer {
-            text-align: center;
-            background-color: darkslategrey;
-            color: aliceblue;
-            padding: 10px;
-            font-size: 1rem;
-        }
-        .review-form {
-            text-align: center;
-            padding: 20px;
-            margin: 20px auto;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            border-radius: 10px;
-            max-width: 600px;
-        }
-        .review-form h2 {
-            margin-bottom: 20px;
-        }
-        .review-form input, .review-form textarea, .review-form button {
-            width: 80%;
-            margin: 10px auto;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-        }
-        .review-form input, .review-form textarea {
-            background: #f4f4f4;
-            color: #333;
-        }
-        .review-form button {
-            background-color: #00ffff;
-            color: #000;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .review-form button:hover {
-            background-color: #007f7f;
-        }
-
-        @media screen and (max-width: 768px) {
-            .profile {
-                max-width: 100%;
-                padding: 10px;
-            }
-            nav {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roshit Pokharel's portfolio – IT student passionate about coding and technology.">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* Body styling */
+    body {
+      background-image: url('https://wallpapers.com/images/hd/programming-a-laptop-wuze1bxup48cr0bs.jpg');
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: darkslategrey;
+      padding: 10px;
+      text-align: center;
+    }
+    #logo {
+      font-size: 2rem;
+      font-family: 'Courier New', Courier, monospace;
+      color: white;
+    }
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: cadetblue;
+      padding: 15px;
+      font-size: 18px;
+      gap: 20px;
+      opacity: 0.9;
+      text-transform: uppercase;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      padding: 5px 10px;
+    }
+    nav a:hover {
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+    main {
+      text-align: center;
+      flex-grow: 1;
+      padding: 20px;
+    }
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+    .profile img {
+      border: 5px solid white;
+      max-width: 200px;
+      border-radius: 50%;
+    }
+    .profile h1, .profile h2 {
+      margin: 10px 0;
+    }
+    .profile h1 {
+      font-size: 2rem;
+      color: #00ffff;
+    }
+    .profile h2 a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    .profile h2 a:hover {
+      text-decoration: underline;
+    }
+    .review-form {
+      text-align: center;
+      padding: 20px;
+      margin: 20px auto;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border-radius: 10px;
+      max-width: 600px;
+    }
+    .review-form h2 {
+      margin-bottom: 20px;
+    }
+    .review-form input, .review-form textarea, .review-form button {
+      width: 80%;
+      margin: 10px auto;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .review-form input, .review-form textarea {
+      background: #f4f4f4;
+      color: #333;
+    }
+    .review-form button {
+      background-color: #00ffff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .review-form button:hover {
+      background-color: #007f7f;
+    }
+    .follow {
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+      color: white;
+    }
+    .follow a {
+      text-decoration: none;
+      color: #00ffff;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .follow a:hover {
+      color: white;
+    }
+    footer {
+      text-align: center;
+      background-color: darkslategrey;
+      color: aliceblue;
+      padding: 10px;
+      font-size: 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      .profile {
+        max-width: 100%;
+        padding: 10px;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <p id="logo">R0shit_pokharel009</p>
-    </header>
-    <main>
-        <div class="profile">
-            <!-- Updated to use a placeholder image -->
-            <img src="https://via.placeholder.com/200" alt="Profile Picture">
-            <h1>PROFILE</h1>
-            <p>Hi! I'm Roshit Pokharel, a passionate IT student with a love for coding, technology, and all things digital. I’m always looking for new challenges and opportunities to expand my knowledge.
-                In my free time, I enjoy exploring new technologies, watching tech tutorials, and experimenting with different programming languages.
-                My goal is to work in software development, contributing to innovative projects that can make a difference in the world. Outside of tech, I love connecting with people and sharing ideas. <br> Let’s connect!
-            </p>
-        </div>
-        <div class="review-form">
-            <h2>Have any Suggestions or Feedback, Share here;</h2>
-            <form action="https://formspree.io/f/mpwqwjen" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" rows="5" placeholder="Your Suggestions or Feedback" required></textarea>
-                <button type="submit">Send via Email</button>
-            </form>
-            <p>Or, contact me directly on <a href="https://wa.me/9844199151" style="color: #00ffff;">WhatsApp</a>.</p>
-        </div>
-    </main>
-    <section class="follow">
-        <p>Connect with me via:</p>
-        <a href="https://www.facebook.com/r0shitpokharel009">Facebook</a>
-        <a href="https://www.instagram.com/r0shit_pokharel009">Instagram</a>
-        <a href="https://www.tiktok.com/r0shit_pokharel009">Tiktok</a>
-        <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/">LinkedIn</a>
-        <a href="https://wa.me/9844199151">WhatsApp</a>
-    </section>
-    <footer>
-        <p>&copy; 2025 Roshit Pokharel. All Rights Reserved.</p>
-    </footer>
+  <header>
+    <p id="logo">R0shit_pokharel009</p>
+  </header>
+  <!-- Added Navigation Bar -->
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#feedback">Feedback</a>
+    <a href="#connect">Connect</a>
+  </nav>
+  <main>
+    <div id="profile" class="profile">
+      <!-- Updated to use a placeholder image -->
+      <img src="https://via.placeholder.com/200" alt="Profile Picture">
+      <h1>PROFILE</h1>
+      <p>Hi! I'm Roshit Pokharel, a passionate IT student with a love for coding, technology, and all things digital. I’m always looking for new challenges and opportunities to expand my knowledge.
+      In my free time, I enjoy exploring new technologies, watching tech tutorials, and experimenting with different programming languages.
+      My goal is to work in software development, contributing to innovative projects that can make a difference in the world. Outside of tech, I love connecting with people and sharing ideas. <br> Let’s connect!</p>
+    </div>
+    <div id="feedback" class="review-form">
+      <h2>Have any suggestions or feedback? Share here:</h2>
+      <form action="https://formspree.io/f/mpwqwjen" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Suggestions or Feedback" required></textarea>
+        <button type="submit">Send via Email</button>
+      </form>
+      <p>Or, contact me directly on <a href="https://wa.me/9844199151" style="color: #00ffff;">WhatsApp</a>.</p>
+    </div>
+  </main>
+  <section id="connect" class="follow">
+    <p>Connect with me via:</p>
+    <a href="https://www.facebook.com/r0shitpokharel009">Facebook</a>
+    <a href="https://www.instagram.com/r0shit_pokharel009">Instagram</a>
+    <a href="https://www.tiktok.com/r0shit_pokharel009">Tiktok</a>
+    <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/">LinkedIn</a>
+    <a href="https://wa.me/9844199151">WhatsApp</a>
+  </section>
+  <footer>
+    <p>&copy; 2025 Roshit Pokharel. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
