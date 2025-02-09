@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Chocolate Day!</title>
+  <style>
+    /* Overall Body Styling with a bright, colorful gradient background */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #FFDEE9, #B5FFFC);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    /* Container with a colorful gradient background and pop-in animation */
+    .container {
+      background: linear-gradient(45deg, #FF9A9E, #FAD0C4, #fbc2eb);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      animation: popIn 1.5s ease-out;
+      max-width: 500px;
+      width: 90%;
+    }
+    @keyframes popIn {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    /* Bouncing heading to add playful energy */
+    h1 {
+      color: #8B0000;
+      font-size: 3em;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(-10px);
+      }
+    }
+    /* Fading in the paragraph text */
+    p {
+      color: #333;
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      animation: fadeIn 3s;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* Styling for the chocolate image with a hover effect */
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      margin-bottom: 20px;
+    }
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+    /* Button styling with a playful gradient and hover scaling */
+    button {
+      background: linear-gradient(45deg, #FF9A9E, #FAD0C4);
+      border: none;
+      color: white;
+      padding: 12px 24px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #FAD0C4, #FF9A9E);
+    }
+    /* Responsive design for smaller devices */
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      p {
+        font-size: 1em;
+      }
+      button {
+        font-size: 1em;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Chocolate Day!</h1>
+    <!-- Random chocolate image from Unsplash -->
+    <img src="https://source.unsplash.com/400x300/?chocolate" alt="Delicious Chocolate">
+    <p>May your day be as sweet and vibrant as a rainbow and as delightful as a box of chocolates!</p>
+    <button onclick="showMessage()">Surprise Me!</button>
+  </div>
+  
+  <script>
+    // Simple JavaScript function to show a personalized greeting
+    function showMessage() {
+      alert("Wishing you a day filled with color, joy, and endless chocolate love!");
+    }
+  </script>
+</body>
+</html>
