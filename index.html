@@ -19,7 +19,7 @@
 body {
     min-height: 100vh;
     background: #000;
-    overflow: hidden;
+    overflow: auto ;
 }
 
 header {
@@ -61,6 +61,7 @@ main {
     text-align: center;
     flex-grow: 1;
     padding: 20px;
+    min-height: 100vh;
 }
 
 @keyframes grow {
@@ -208,7 +209,7 @@ footer {
 }
 
 .container {
-    position: fixed;
+    position:fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -232,6 +233,7 @@ footer {
     opacity: 0.9;
     transform-origin: center;
 }
+
 
 @keyframes float {
     0%, 100% {
@@ -266,14 +268,6 @@ footer {
   <header>
     <p id="logo">R0shit_pokharel009</p>
   </header>
-  <section class="follow">
-    <p>Connect with me via:</p>
-    <a href="https://www.facebook.com/r0shitpokharel009">Facebook</a>
-    <a href="https://www.instagram.com/r0shit_pokharel009">Instagram</a>
-    <a href="https://www.tiktok.com/r0shit_pokharel009">Tiktok</a>
-    <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/">LinkedIn</a>
-    <a href="https://wa.me/9844199151">WhatsApp</a>
-  </section>
   <main>
     <div class="profile">
       <img src="WhatsApp Image 2024-12-26 at 7.45.28 PM (1).jpeg" alt="Profile Picture">
@@ -287,6 +281,7 @@ footer {
     <div class="next-page">
       <!-- <button type="button" onclick="window.location.href='k tha malai.html';">Chocolate day</button> -->
     </div>
+    
     <div class="review-form">
       <h2>Have Suggestions? Share Your Feedback</h2>
       <form action="https://formspree.io/f/mpwqwjen" method="POST">
@@ -300,10 +295,17 @@ footer {
       </p>
     </div>
   </main>
+  <section class="follow">
+    <p>Connect with me via:</p>
+    <a href="https://www.facebook.com/r0shitpokharel009">Facebook</a>
+    <a href="https://www.instagram.com/r0shit_pokharel009">Instagram</a>
+    <a href="https://www.tiktok.com/r0shit_pokharel009">Tiktok</a>
+    <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/">LinkedIn</a>
+    <a href="https://wa.me/9844199151">WhatsApp</a>
+  </section>
   <footer>
     <p>&copy; 2025 Roshit Pokharel. All Rights Reserved.</p>
   </footer>
-  Load JavaScript at the end to ensure the DOM is loaded
   <script>
     class BallSystem {
     constructor() {
@@ -381,7 +383,7 @@ footer {
     }
 }
 
-// Ensure the DOM is fully loaded before running the script
+
 document.addEventListener('DOMContentLoaded', () => {
     new BallSystem();
 });
