@@ -7,13 +7,13 @@ class BallSystem {
 
     init() {
         // Create initial 300 balls
-        for(let i = 0; i < 300; i++) {
+        for (let i = 0; i < 300; i++) {
             this.createBall();
         }
     }
 
     createBall(x = Math.random() * 100, y = Math.random() * 100) {
-        if(this.container.children.length >= this.maxBalls) return;
+        if (this.container.children.length >= this.maxBalls) return;
         
         const ball = document.createElement('div');
         ball.className = 'ball';
@@ -65,7 +65,7 @@ class BallSystem {
 
     generateExplosion(x, y, hue) {
         // Create 10-15 new balls per click
-        for(let i = 0; i < 10 + Math.floor(Math.random() * 6); i++) {
+        for (let i = 0; i < 10 + Math.floor(Math.random() * 6); i++) {
             const angle = (Math.PI * 2) * (i / (10 + Math.random() * 5));
             const newX = Math.min(99, Math.max(1, x + Math.cos(angle) * 5));
             const newY = Math.min(99, Math.max(1, y + Math.sin(angle) * 5));
@@ -74,4 +74,7 @@ class BallSystem {
     }
 }
 
-new BallSystem();
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener('DOMContentLoaded', () => {
+    new BallSystem();
+});
