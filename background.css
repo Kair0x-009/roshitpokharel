@@ -1,0 +1,70 @@
+
+:root {
+    --ball-size: 25px;
+    --animation-duration: 30s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    overflow: hidden;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.balls {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: contrast(10px);
+}
+
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    animation: float var(--animation-duration) linear infinite both;
+    will-change: transform;
+    mix-blend-mode: screen;
+    cursor: pointer;
+    opacity: 0.9;
+    transform-origin: center;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(
+            calc(var(--tx-1) * 1vw),
+            calc(var(--ty-1) * 1vh)
+        );
+    }
+    25% {
+        transform: translate(
+            calc(var(--tx-2) * 1vw),
+            calc(var(--ty-2) * 1vh)
+        );
+    }
+    50% {
+        transform: translate(
+            calc(var(--tx-3) * 1vw),
+            calc(var(--ty-3) * 1vh)
+        );
+    }
+    75% {
+        transform: translate(
+            calc(var(--tx-4) * 1vw),
+            calc(var(--ty-4) * 1vh)
+        );
+    }
+}
