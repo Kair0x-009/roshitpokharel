@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Roshit Pokharel, a creative and passionate Web Developer." />
+  <meta name="keywords" content="Roshit Pokharel, Web Developer, Portfolio, HTML, CSS, JavaScript, Developer Pokhara" />
+  <meta name="author" content="Roshit Pokharel" />
+  <title>Roshit Pokharel | Web Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 20px;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.9);
+      backdrop-filter: blur(8px);
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+    }
+
+    nav h2 {
+      color: cyan;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      font-weight: 600;
+      font-size: 16px;
+      padding: 6px 10px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: cyan;
+    }
+
+    /* Home Section */
+    #home {
+      background-color: #1e1e1e;
+      text-align: center;
+      position: relative;
+    }
+
+    #home::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('your-background-image.jpg') center/cover no-repeat;
+      filter: blur(12px);
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    #home h1 {
+      font-size: 2.5rem;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      background-color: cyan;
+      color: #000;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #ff6347;
+    }
+
+    /* Services */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-item {
+      background-color: rgba(34, 34, 34, 0.9);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 12px rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(255, 255, 255, 0.15);
+    }
+
+    .service-item img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .contact-form,
+    .contact-details {
+      flex: 1 1 350px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #444;
+      background-color: #333;
+      color: white;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background-color: cyan;
+      color: black;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #111;
+      color: #ccc;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      #home h1 {
+        font-size: 1.8rem;
+      }
+
+      .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav>
+    <h2>R0shit P0kharel</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<section id="home">
+    <h1>Welcome Dear Visitor.</h1>
+    <p>Hi, I’m <strong>Roshit Pokharel</strong> — crafting interactive, beautiful websites with modern tech & passion.</p>
+    <a class="btn" href="#about">Learn More About Me</a>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I’m a tech-savvy web developer studying <strong>Computer System & IT</strong> at <strong>Pokhara University</strong>.</p>
+    <p>I blend creativity & code to create responsive, engaging user experiences. Learning new techs & pushing boundaries fuels me.</p>
+    
+    <!-- <h3>🎓 Education</h3>
+    <ul>
+        <li><strong>CSIT, Pokhara University</strong></li>
+        <li>10+2 Management with Computer Science</li>
+    </ul> -->
+
+    <h3>🛠 Technical Skills</h3>
+    <ul>
+        <li>Front-end: HTML, CSS, JavaScript</li>
+        <li>Programming: Java (Basic), C</li>
+    </ul>
+
+    <h3>💼 Career Goals</h3>
+    <p>To be a full-stack dev working on AI-integrated, smart websites that solve real-world problems.</p>
+
+    <h3>🌟 Soft Skills</h3>
+    <ul>
+        <li>Problem Solving • Communication • Creativity • Teamwork</li>
+    </ul>
+
+    <a class="btn" href="your-cv.pdf" download>⬇ Download My CV</a>
+
+    <h3>🔗 Let's Connect</h3>
+    <p>
+        <a class="btn" href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+        <a class="btn" href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a class="btn" href="mailto:youremail@example.com">Email</a>
+    </p>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>What I Do</h2>
+    <div class="service-grid">
+        <div class="service-item">
+            <img src="web-design-icon.png" alt="Web Design">
+            <h3>Web Design</h3>
+            <p>Creating modern, user-friendly, responsive designs for all devices.</p>
+        </div>
+        <div class="service-item">
+            <img src="web-development-icon.png" alt="Web Dev">
+            <h3>Web Development</h3>
+            <p>Bringing ideas to life with HTML, CSS, JS & back-end integration.</p>
+        </div>
+        <div class="service-item">
+            <img src="seo-icon.png" alt="SEO">
+            <h3>SEO Optimization</h3>
+            <p>Boosting visibility and improving web traffic with smart SEO strategies.</p>
+        </div>
+        <div class="service-item">
+            <img src="content-writing-icon.png" alt="Content">
+            <h3>Content Writing</h3>
+            <p>Crafting high-quality content that speaks to your brand’s audience.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Get In Touch</h2>
+    <p>Let's build something epic together. Reach out anytime!</p>
+    <div class="contact-section">
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mpwqwjen" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Your Name" />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Your Email" />
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-details">
+            <h3>Reach Me Directly</h3>
+            <ul>
+                <li><strong>Email:</strong> youremail@example.com</li>
+                <li><strong>Phone:</strong> +123 456 789</li>
+                <li><strong>Location:</strong> Your City, Country</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2025 Roshit Pokharel | All rights reserved.</p>
+</footer>
+</body>
+
+</html>
