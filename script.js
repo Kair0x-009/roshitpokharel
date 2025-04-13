@@ -45,6 +45,14 @@
         alert("Right-click is disabled to protect content. 👀");
       });
 
+     
+  document.addEventListener("keydown", function (e) {
+    if (e.ctrlKey && e.key !== "Control") {
+      e.preventDefault();
+      alert("Ctrl + key combinations are disabled 🚫");
+    }
+  });
+        
       // Disable dev tools (basic)
       document.onkeydown = function (e) {
         if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
@@ -52,19 +60,3 @@
           return false;
         }
       };
-
-      // Custom Cursor
-      const cursor = document.querySelector(".custom-cursor");
-      window.addEventListener("mousemove", (e) => {
-        cursor.style.top = e.clientY + "px";
-        cursor.style.left = e.clientX + "px";
-      });
-
-      window.addEventListener("mousedown", () => {
-        cursor.style.transform = "scale(1.5)";
-      });
-
-      window.addEventListener("mouseup", () => {
-        cursor.style.transform = "scale(1)";
-      });
-    });
