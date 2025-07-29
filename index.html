@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <!-- Basic Meta -->
   <meta charset="UTF-8" />
@@ -11,14 +11,18 @@
 
   <title>Roshit Pokharel | Web Developer Portfolio</title>
 
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 
 <body>
-  <nav>
+  <nav aria-label="Main navigation">
     <h2>R0shit P0kharel</h2>
     <ul>
       <li><a href="#home">Home</a></li>
@@ -26,18 +30,21 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button id="theme-toggle" aria-label="Toggle dark/light mode">
+      <span class="theme-icon">🌓</span>
+    </button>
   </nav>
 
   <!-- Hero Section -->
   <section id="home">
     <h1>Welcome</h1>
-    <p>Hello, I’m <strong>Roshit Pokharel</strong> I design bold and functional websites with precision and purpose.</p>
+    <p>Hello, I'm <strong>Roshit Pokharel</strong> I design bold and functional websites with precision and purpose.</p>
     <a class="btn" href="#about">Learn More About Me</a>
   </section>
 
   <!-- About Section -->
   <section id="about">
-    <p>I’m currently studying <strong>Bachelor's in Computer System and Information Technology</strong> at <strong>Pokhara University</strong>– Faculty of Management Studies.
+    <p>I'm currently studying <strong>Bachelor's in Computer System and Information Technology</strong> at <strong>Pokhara University</strong>– Faculty of Management Studies.
        I'm passionate about building clean, interactive web interfaces using modern technologies. With a strong drive for improvement, I'm continuously learning new skills and 
        tools that help me craft better digital experiences.</p>
     <p>I blend creativity & code to create responsive, engaging user experiences. Learning new techs & pushing boundaries fuels me.</p>
@@ -56,68 +63,71 @@
       <li>Communication</li>
       <li>Problem Solving</li>
     </ul>
-
-    <!-- <a class="btn" href="your-cv.pdf" download>⬇ Download My CV</a> -->
-
-    
   </section>
+
+  <!-- Services Section -->
   <section id="services">
     <div class="service-grid">
       <div class="service-item">
-        <img src="web-design-icon.png" alt="Web Design">
+        <img src="web-design-icon.png" alt="Web Design" loading="lazy">
         <h3>Web Design</h3>
         <p>Creating modern, user-friendly, responsive designs for all devices.</p>
       </div>
       <div class="service-item">
-        <img src="web-development-icon.png" alt="Web Dev">
+        <img src="web-development-icon.png" alt="Web Dev" loading="lazy">
         <h3>Web Development</h3>
         <p>Bringing ideas to life with HTML, CSS, JS & back-end integration.</p>
       </div>
       <div class="service-item">
-        <img src="seo-icon.png" alt="SEO">
+        <img src="seo-icon.png" alt="SEO" loading="lazy">
         <h3>SEO Optimization</h3>
         <p>Boosting visibility and improving web traffic with smart SEO strategies.</p>
       </div>
       <div class="service-item">
-        <img src="content-writing-icon.png" alt="Content">
+        <img src="content-writing-icon.png" alt="Content" loading="lazy">
         <h3>Content Writing</h3>
-        <p>Crafting high-quality content that speaks to your brand’s audience.</p>
+        <p>Crafting high-quality content that speaks to your brand's audience.</p>
       </div>
     </div>
   </section>
   
+  <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
     <p>Let's build something epic together. Reach out anytime!</p>
     <div class="contact-section">
       <div class="contact-form">
-        <form action="https://formspree.io/f/mpwqwjen" method="POST">
+        <form id="contact-form" action="https://formspree.io/f/mpwqwjen" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required placeholder="Your Name" />
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required placeholder="Your Email" />
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
-          <button type="submit">Send Message</button>
+          <button type="submit" id="submit-btn">
+            <span id="submit-text">Send Message</span>
+          </button>
         </form>
       </div>
       <div class="contact-details">
         <h3>Reach Me Directly</h3>
-    <p>
-      <a class="btn" href="https://www.facebook.com/r0shitpokharel009" target="_blank">Facebook</a>
-      <a class="btn" href="https://www.instagram.com/r0shit_pokharel009/" target="_blank">Instagram</a>
-      <a class="btn" href="https://www.tiktok.com/@r0shit_pokharel009" target="_blank">Tiktok</a>
-      <a class="btn" href="https://www.linkedin.com/in/roshit-pokharel-63504133a/" target="_blank">Linkedin</a>
-      <a class="btn" href="mailto:roshitpokharel@gmail.com">Email</a>
-      <a class="btn" href="tel:9844199151">Phone</a>
-    </p>
+        <p>
+          <a class="btn" href="https://www.facebook.com/r0shitpokharel009" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="btn" href="https://www.instagram.com/r0shit_pokharel009/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a class="btn" href="https://www.tiktok.com/@r0shit_pokharel009" target="_blank" rel="noopener noreferrer">Tiktok</a>
+          <a class="btn" href="https://www.linkedin.com/in/roshit-pokharel-63504133a/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+          <a class="btn" href="mailto:roshitpokharel@gmail.com">Email</a>
+          <a class="btn" href="tel:9844199151">Phone</a>
+        </p>
       </div>
     </div>
   </section>
   
   <footer>
-    <p>© 2025 Roshit Pokharel | All rights reserved.</p>
+    <p>© <span id="current-year"></span> Roshit Pokharel | All rights reserved.</p>
   </footer>
 
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
 </body>
 </html>
