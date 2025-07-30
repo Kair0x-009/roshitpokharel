@@ -1,108 +1,167 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Set current year in footer
-  document.getElementById("current-year").textContent = new Date().getFullYear();
+document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Navigation
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', function() {
+        this.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Typing Animation
+    const typed = new Typed('.typed-text', {
+        strings: ['Web Developer', 'UI/UX Designer', 'Freelancer'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        loop: true
+    });
+    
+    // Project Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const filterValue = button.getAttribute('data-filter');
+            
+            projectCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Scroll Reveal Animation
+    ScrollReveal().reveal('.hero-content, .about-image, .skill-category, .project-card, .contact-info, .contact-form', {
+        delay: 200,
+        distance: '50px',
+        origin: 'bottom',
+        interval: 100,
+        easing: 'ease-in-out'
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Animate skill bars on scroll
+    const skillBars = document.querySelectorAll('.skill-level');
+    
+    function animateSkillBars() {
+        skillBars.forEach(bar => {
+            const width = bar.style.width;
+            bar.style.width = '0';
+            
+            setTimeout(() => {
+                bar.style.width = width;
+            }, 100);
+        });
+    }
+    
+    // Intersection Observer for skill bars animation
+    const skillsSection = document.querySelector('.skills');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateSkillBars();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    if (skillsSection) {
+        observer.observe(skillsSection);
+    }
+    
+    // Form validation
+    const contactForm = document.querySelector('.contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple validation
+            const nameInput = this.querySelector('input[type="text"]');
+            const emailInput = this.querySelector('input[type="email"]');
+            const messageInput = this.querySelector('textarea');
+            
+            if (!nameInput.value.trim()) {
+                alert('Please enter your name');
+                nameInput.focus();
+                return;
+            }
+            
+            if (!emailInput.value.trim() || !isValidEmail(emailInput.value)) {
+                alert('Please enter a valid email address');
+                emailInput.focus();
+                return;
+            }
+            
+            if (!messageInput.value.trim()) {
+                alert('Please enter your message');
+                messageInput.focus();
+                return;
+            }
+            
+            // Form submission would go here
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    }
+    
+    function isValidEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+    }
+});
 
-  // Theme Toggle Functionality
-  const themeToggle = document.getElementById("theme-toggle");
-  const currentTheme = localStorage.getItem("theme") || "dark";
-  
-  document.documentElement.setAttribute("data-theme", currentTheme);
-  
-  themeToggle.addEventListener("click", () => {
-    const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-  });
+// Add to script.js
+const darkModeToggle = document.createElement('div');
+darkModeToggle.className = 'dark-mode-toggle';
+darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+document.body.appendChild(darkModeToggle);
 
-  // Image Loading Animation
-  document.querySelectorAll("img").forEach(img => {
-    if (img.complete) {
-      img.classList.add("loaded");
+darkModeToggle.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const icon = this.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
     } else {
-      img.addEventListener("load", () => {
-        img.classList.add("loaded");
-      });
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
-  });
-
-  // Form Validation
-  const form = document.getElementById("contact-form");
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
-  const submitBtn = document.getElementById("submit-btn");
-  const submitText = document.getElementById("submit-text");
-
-  // Improved regex patterns
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const nameRegex = /^[a-zA-Z\s'-]{3,50}$/;
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    // Clear previous error messages
-    clearErrors();
-    
-    let isValid = true;
-    
-    // Name validation
-    if (!nameRegex.test(nameInput.value.trim())) {
-      showError(nameInput, "Please enter a valid name (3-50 letters, spaces, hyphens or apostrophes only)");
-      isValid = false;
-    }
-    
-    // Email validation
-    if (!emailRegex.test(emailInput.value.trim())) {
-      showError(emailInput, "Please enter a valid email address");
-      isValid = false;
-    }
-    
-    // Message validation
-    if (messageInput.value.trim().length < 10) {
-      showError(messageInput, "Message must be at least 10 characters long");
-      isValid = false;
-    }
-    
-    if (isValid) {
-      // Form is valid, show loading state
-      submitText.textContent = "Sending...";
-      submitBtn.disabled = true;
-      
-      // Simulate form submission (replace with actual form submission)
-      setTimeout(() => {
-        form.submit();
-        submitText.textContent = "Message Sent!";
-        setTimeout(() => {
-          submitText.textContent = "Send Message";
-          submitBtn.disabled = false;
-          form.reset();
-        }, 2000);
-      }, 1500);
-    }
-  });
-
-  function showError(input, message) {
-    const errorElement = document.createElement("div");
-    errorElement.className = "error-message";
-    errorElement.textContent = message;
-    input.parentNode.insertBefore(errorElement, input.nextSibling);
-    input.focus();
-  }
-
-  function clearErrors() {
-    const errors = document.querySelectorAll(".error-message");
-    errors.forEach(error => error.remove());
-  }
-
-  // Developer Tools Notice (instead of blocking)
-  document.addEventListener("keydown", function(e) {
-    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
-      console.log("This portfolio is created by Roshit Pokharel. Please respect copyright.");
-    }
-  });
-
-  // Right-click notice
-  document.addEventListener("contextmenu", function(e) {
-    console.log("Portfolio content is protected by copyright. Please contact for usage.");
-  });
 });
