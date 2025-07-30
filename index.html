@@ -1,133 +1,241 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <!-- Basic Meta -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio of Roshit Pokharel, a creative and passionate Web Developer." />
-  <meta name="keywords" content="Roshit Pokharel, Web Developer, Portfolio, HTML, CSS, JavaScript, Developer Pokhara" />
-  <meta name="author" content="Roshit Pokharel" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://formspree.io; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com;">
-
-  <title>Roshit Pokharel | Web Developer Portfolio</title>
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roshit Pokharel | Modern Portfolio</title>
+    <meta name="description" content="Modern portfolio showcasing Roshit Pokharel's work and skills">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <nav aria-label="Main navigation">
-    <h2>R0shit P0kharel</h2>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Toggle dark/light mode">
-      <span class="theme-icon">🌓</span>
-    </button>
-  </nav>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://www.facebook.com/r0shitpokharel009" class="logo">RP</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="home">
-    <h1>Welcome</h1>
-    <p>Hello, I'm <strong>Roshit Pokharel</strong> I design bold and functional websites with precision and purpose.</p>
-    <a class="btn" href="#about">Learn More About Me</a>
-  </section>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight">Roshit Pokharel</span>
+                    </h1>
+                    <div class="typewriter">
+                        <h2 class="hero-subtitle">I'm a <span class="typed-text"></span></h2>
+                    </div>
+                    <p class="hero-description">
+                        Passionate developer creating modern web experiences with cutting-edge technologies.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="https://github.com/Kair0x-009" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="" alt="Roshit Pokharel" class="profile-img">
+                </div>
+            </div>
+        </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <p>I'm currently studying <strong>Bachelor's in Computer System and Information Technology</strong> at <strong>Pokhara University</strong>– Faculty of Management Studies.
-       I'm passionate about building clean, interactive web interfaces using modern technologies. With a strong drive for improvement, I'm continuously learning new skills and 
-       tools that help me craft better digital experiences.</p>
-    <p>I blend creativity & code to create responsive, engaging user experiences. Learning new techs & pushing boundaries fuels me.</p>
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/about.jpg" alt="About Roshit">
+                    </div>
+                    <div class="about-text">
+                        <h3>Who am I?</h3>
+                        <p>
+                            I'm a passionate developer with expertise in modern web technologies. 
+                            I love creating efficient, scalable, and user-friendly applications.
+                        </p>
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <i class="fas fa-user"></i>
+                                <span><strong>Name:</strong> Roshit Pokharel</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-envelope"></i>
+                                <span><strong>Email:</strong> roshitpokharel@gmail.com</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span><strong>Location:</strong> Kathmandu, Nepal</span>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/Kair0x-009"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.facebook.com/r0shitpokharel009"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/r0shit_pokharel009/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h3>🛠 Technical Skills</h3>
-    <ul>
-      <li>Front-end: HTML, CSS, JavaScript</li>
-      <li>Programming: Java (Basic), C Programming</li>
-    </ul>
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <!--  <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skill-item">
+                            <span class="skill-name">Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 0%"></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h3>🌟 Soft Skills</h3>
-    <ul>
-      <li>Quick learner</li>
-      <li>Self Motivated</li>
-      <li>Creativity</li>
-      <li>Communication</li>
-      <li>Problem Solving</li>
-    </ul>
-  </section>
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">My <span class="highlight">Projects</span></h2>
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="app">App</button>
+                    <button class="filter-btn" data-filter="design">Design</button>
+                </div>
+                <div class="projects-grid">
+                    Currently Unavailable!!!
+                    <!-- Project items will be added here -->
+                </div>
+            </div>
+        </section>
 
-  <!-- Services Section -->
-  <section id="services">
-    <div class="service-grid">
-      <div class="service-item">
-        <img src="web-design-icon.png" alt="Web Design" loading="lazy">
-        <h3>Web Design</h3>
-        <p>Creating modern, user-friendly, responsive designs for all devices.</p>
-      </div>
-      <div class="service-item">
-        <img src="web-development-icon.png" alt="Web Dev" loading="lazy">
-        <h3>Web Development</h3>
-        <p>Bringing ideas to life with HTML, CSS, JS & back-end integration.</p>
-      </div>
-      <div class="service-item">
-        <img src="seo-icon.png" alt="SEO" loading="lazy">
-        <h3>SEO Optimization</h3>
-        <p>Boosting visibility and improving web traffic with smart SEO strategies.</p>
-      </div>
-      <div class="service-item">
-        <img src="content-writing-icon.png" alt="Content" loading="lazy">
-        <h3>Content Writing</h3>
-        <p>Crafting high-quality content that speaks to your brand's audience.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Let's build something epic together. Reach out anytime!</p>
-    <div class="contact-section">
-      <div class="contact-form">
-        <form id="contact-form" action="https://formspree.io/f/mpwqwjen" method="POST">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required placeholder="Your Name" />
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required placeholder="Your Email" />
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="4" required placeholder="Your Message"></textarea>
-          <button type="submit" id="submit-btn">
-            <span id="submit-text">Send Message</span>
-          </button>
-        </form>
-      </div>
-      <div class="contact-details">
-        <h3>Reach Me Directly</h3>
-        <p>
-          <a class="btn" href="https://www.facebook.com/r0shitpokharel009" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a class="btn" href="https://www.instagram.com/r0shit_pokharel009/" target="_blank" rel="noopener noreferrer">Instagram</a>
-          <a class="btn" href="https://www.tiktok.com/@r0shit_pokharel009" target="_blank" rel="noopener noreferrer">Tiktok</a>
-          <a class="btn" href="https://www.linkedin.com/in/roshit-pokharel-63504133a/" target="_blank" rel="noopener noreferrer">Linkedin</a>
-          <a class="btn" href="mailto:roshitpokharel@gmail.com">Email</a>
-          <a class="btn" href="tel:9844199151">Phone</a>
-        </p>
-      </div>
-    </div>
-  </section>
-  
-  <footer>
-    <p>© <span id="current-year"></span> Roshit Pokharel | All rights reserved.</p>
-  </footer>
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>roshitpokharel@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+977 9844199151</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kathmandu, Nepal</span>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <!-- Scripts -->
-  <script src="script.js" defer></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>Roshit Pokharel</h3>
+                    <p>Passionate developer creating modern web experiences.</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Follow Me</h3>
+                    <div class="social-icons">
+                        <a href="https://github.com/Kair0x-009"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/roshit-pokharel-63504133a/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/r0shitpokharel009"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/r0shit_pokharel009/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Roshit Pokharel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
 </body>
 </html>
